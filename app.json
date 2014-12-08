@@ -1,0 +1,6 @@
+{
+  "name": "Tileify WMS Proxy",
+  "description": "Fetch slippy map tiles from a WMS map service",
+  "website": "https://github.com/JasonSanford/tileify-wms-proxy",
+  "repository": "https://github.com/JasonSanford/tileify-wms-proxy"
+}

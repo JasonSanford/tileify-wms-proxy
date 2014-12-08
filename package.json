@@ -1,0 +1,30 @@
+{
+  "name": "tileify-wms-proxy",
+  "version": "0.0.1",
+  "description": "Fetch slippy map tiles from a WMS map service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JasonSanford/tileify-wms-proxy.git"
+  },
+  "keywords": [
+    "wms",
+    "tiles",
+    "proxy"
+  ],
+  "author": "Jason Sanford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonSanford/tileify-wms-proxy/issues"
+  },
+  "homepage": "https://github.com/JasonSanford/tileify-wms-proxy",
+  "dependencies": {
+    "tileify-wms": "~1.0.0",
+    "express": "~4.10.4",
+    "request": "~2.49.0"
+  }
+}

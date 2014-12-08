@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tileify WMS - Fetch slippy map tiles from a WMS map services">
+    <meta name="author" content="Jason Sanford">
+    <title>Tileify WMS</title>
+    <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left">
+        <h3>Tileify WMS Proxy</h3>
+        <p>
+          Use WMS map services in common web mapping APIs like Leaflet, OpenLayers and Google Maps.
+        </p>
+        <p>
+          Check out the <a href="https://github.com/JasonSanford/tileify-wms-proxy">GitHub repo</a> for code and more documentation.
+        </p>
+        <hr>
+        <p>
+          To get started paste a WMS map service URL below and modify the URL parameters as necessary. Click "Update Tile Layer" to refresh the map.
+        </p>
+        <form role="form">
+          <div class="form-group">
+            <label for="wms_url">WMS Service URL</label>
+            <input type="text" class="form-control" value="http://gis.srh.noaa.gov/arcgis/services/NDFDTemps/MapServer/WMSServer" id="wms_url">
+          </div>
+          <div class="form-group">
+            <label>URL Parameters (key|value)</label>
+            <div class="params">
+              <input type="text" class="form-control param param-key" value="layers">
+              <input type="text" class="form-control param param-value" value="6">
+            </div>
+            <div class="params">
+              <input type="text" class="form-control param param-key" value="format">
+              <input type="text" class="form-control param param-value" value="image/png">
+            </div>
+            <div class="params">
+              <input type="text" class="form-control param param-key" value="transparent">
+              <input type="text" class="form-control param param-value" value="true">
+            </div>
+            <div class="params">
+              <input type="text" class="form-control param param-key" value="version">
+              <input type="text" class="form-control param param-value" value="1.1.1">
+            </div>
+            <div class="params">
+              <input type="text" class="form-control param param-key" value="styles">
+              <input type="text" class="form-control param param-value" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="proxy_url_template">Proxy URL Template (auto-generated)</label>
+            <textarea class="form-control" id="proxy_url_template"></textarea>
+          </div>
+          <div style="text-align: center;">
+            <button type="submit" id="update-layer" class="btn btn-default">Update Tile Layer</button>
+          </div>
+        </form>
+      </div>
+      <div class="map"></div>
+    </div>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
