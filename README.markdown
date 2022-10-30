@@ -2,8 +2,6 @@
 
 This is a node application that uses [tileify-wms](https://github.com/JasonSanford/tileify-wms) to create a simple proxy for serving up WMS map services as map tiles that can be easily added to any slippy map (Leaflet, OpenLayers, Google Maps).
 
-[View a demo](http://tileify-wms.herokuapp.com/)
-
 ### Install - Run
 
 ```
@@ -58,7 +56,3 @@ An example URL looks like:
 In addition to the required `url` URL parameter, you can also pass a `&redirect=true` parameter that will perform an HTTP redirect to the map server instead of serving it itself.
 
 Also accepted are any [WMS URL parameters](http://docs.geoserver.org/stable/en/user/services/wms/reference.html) supported by your WMS server. This software makes no attempt to enforce the (somewhat confusing) WMS URL parameters across the various versions implemented in the wild. But good luck!
-
-I've deployed an instance of this application at Heroku. You're free to use it as you wish. In the examples above just use the `tileify-wms.herokuapp.com` domain instead of `localhost:5000`.
-
-http://tileify-wms.herokuapp.com
